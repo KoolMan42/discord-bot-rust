@@ -1,0 +1,18 @@
+[package]
+name = "discord-bot-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+rand = "0.8.5"
+serenity = { version = "0.10", default-features = false, features = ["client", "gateway", "rustls_backend", "model", "cache", "framework", "standard_framework", "rustls_backend", "voice"] }
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread", "signal"] }
+dotenv = "0.15"
+tracing = "0.1.23"
+tracing-subscriber = "0.2"
+tracing-futures = "0.2"
+songbird = { version = "0.2.2", features = ["yt-dlp", "builtin-queue","serenity-rustls","serenity"] }
